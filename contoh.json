@@ -1,0 +1,35 @@
+[
+  {
+    "question": "Apa ibu kota Indonesia?",
+    "options": [
+      "Bandung",
+      "Surabaya",
+      "Jakarta",
+      "Medan"
+    ],
+    "answer": 2,
+    "explanation": "Jakarta adalah ibu kota Indonesia."
+  },
+  {
+    "question": "2 + 2 = ?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "2 ditambah 2 sama dengan 4."
+  },
+    {
+    "question": "2 + 3 = ?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "2 ditambah 3 sama dengan 5."
+  }
+]
