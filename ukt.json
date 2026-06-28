@@ -1,0 +1,553 @@
+[
+  {
+    "question": "Dasar penghitungan angsuran PPh Pasal 25 pada umumnya berasal dari apa?",
+    "options": [
+      "PPh terutang menurut SPT Tahunan PPh tahun pajak sebelumnya",
+      "Omzet bulan berjalan",
+      "Laporan keuangan semester pertama",
+      "Penghasilan bruto tahun berjalan"
+    ],
+    "answer": 0,
+    "explanation": "Angsuran PPh Pasal 25 pada umumnya dihitung berdasarkan PPh terutang menurut SPT Tahunan PPh tahun pajak sebelumnya setelah dikurangi kredit pajak yang diperbolehkan."
+  },
+  {
+    "question": "PPh Pasal 22 termasuk komponen yang bagaimana dalam perhitungan angsuran PPh Pasal 25?",
+    "options": [
+      "Ditambahkan ke PPh terutang",
+      "Dikurangkan sebagai kredit pajak",
+      "Diabaikan dalam penghitungan",
+      "Dikenakan kembali sebagai sanksi"
+    ],
+    "answer": 1,
+    "explanation": "PPh Pasal 22 merupakan salah satu kredit pajak yang dikurangkan dalam penghitungan angsuran PPh Pasal 25."
+  },
+  {
+    "question": "Sebelum SPT Tahunan PPh disampaikan dan masih dalam batas waktu penyampaian, besarnya angsuran PPh Pasal 25 mengikuti angsuran bulan apa pada tahun sebelumnya?",
+    "options": [
+      "Januari",
+      "Juni",
+      "November",
+      "Desember"
+    ],
+    "answer": 3,
+    "explanation": "Sebelum SPT Tahunan disampaikan, angsuran PPh Pasal 25 menggunakan besaran angsuran bulan terakhir tahun pajak sebelumnya, yaitu bulan Desember."
+  },
+  {
+    "question": "Siapakah yang berwenang menetapkan penghitungan besarnya angsuran bagi Wajib Pajak yang berhak atas kompensasi kerugian?",
+    "options": [
+      "Menteri Keuangan",
+      "Direktur Jenderal Pajak",
+      "BPK",
+      "Menteri Koordinator Perekonomian"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 25 ayat (6) UU PPh memberikan kewenangan kepada Direktur Jenderal Pajak untuk menetapkan besarnya angsuran dalam kondisi tertentu, termasuk kompensasi kerugian."
+  },
+  {
+    "question": "Wajib Pajak baru termasuk kelompok yang penghitungan angsuran PPh Pasal 25-nya ditetapkan oleh siapa?",
+    "options": [
+      "Direktur Jenderal Pajak",
+      "Menteri Keuangan",
+      "Kantor Pelayanan Pajak",
+      "Badan Pemeriksa Keuangan"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 25 ayat (7) UU PPh menyatakan bahwa Menteri Keuangan menetapkan penghitungan besarnya angsuran bagi Wajib Pajak baru."
+  },
+  {
+    "question": "Pasal berapakah yang mengatur kondisi PPh Lebih Bayar dalam SPT Tahunan PPh?",
+    "options": [
+      "Pasal 25",
+      "Pasal 28",
+      "Pasal 28A",
+      "Pasal 29"
+    ],
+    "answer": 2,
+    "explanation": "Pasal 28A mengatur mengenai kondisi PPh Lebih Bayar setelah memperhitungkan kredit pajak dalam SPT Tahunan."
+  },
+  {
+    "question": "Jika PPh terutang lebih besar daripada kredit pajak yang dimiliki, kondisi tersebut termasuk dalam Pasal berapa?",
+    "options": [
+      "Pasal 21",
+      "Pasal 28A",
+      "Pasal 29",
+      "Pasal 31E"
+    ],
+    "answer": 2,
+    "explanation": "Pasal 29 mengatur mengenai PPh Kurang Bayar apabila PPh terutang lebih besar daripada kredit pajak yang dimiliki."
+  },
+  {
+    "question": "Wajib Pajak badan dalam negeri dengan peredaran bruto sampai Rp50 miliar memperoleh fasilitas Pasal 31E berupa apa?",
+    "options": [
+      "Pembebasan pajak sepenuhnya",
+      "Pengurangan tarif sebesar 50%",
+      "Penundaan pembayaran pajak",
+      "Penghapusan sanksi administrasi"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 31E memberikan fasilitas pengurangan tarif sebesar 50% dari tarif normal atas bagian Penghasilan Kena Pajak tertentu."
+  },
+  {
+    "question": "Bagian peredaran bruto maksimal yang memperoleh fasilitas Pasal 31E adalah sebesar berapa?",
+    "options": [
+      "Rp2,4 miliar",
+      "Rp4,8 miliar",
+      "Rp10 miliar",
+      "Rp50 miliar"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E dikenakan atas Penghasilan Kena Pajak yang berasal dari bagian peredaran bruto sampai dengan Rp4,8 miliar."
+  },
+  {
+    "question": "Menurut SE-02/PJ/2015, fasilitas Pasal 31E bersifat bagaimana bagi Wajib Pajak yang memenuhi syarat?",
+    "options": [
+      "Pilihan Wajib Pajak",
+      "Wajib diterapkan dan bukan pilihan",
+      "Hanya berlaku untuk BUMN",
+      "Hanya berlaku jika mengajukan permohonan"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa fasilitas Pasal 31E bukan merupakan pilihan, tetapi berlaku bagi Wajib Pajak yang memenuhi persyaratan."
+  },
+{
+    "question": "Dalam penghitungan angsuran PPh Pasal 25, kredit pajak yang diperhitungkan meliputi PPh Pasal 21, 22, 23, dan apa lagi?",
+    "options": [
+      "PPh Pasal 24",
+      "PPh Pasal 26",
+      "PPN Masukan",
+      "Bea Meterai"
+    ],
+    "answer": 0,
+    "explanation": "Kredit pajak yang diperhitungkan dalam penghitungan angsuran PPh Pasal 25 meliputi PPh Pasal 21, 22, 23, dan 24."
+  },
+  {
+    "question": "Apa tujuan utama adanya angsuran PPh Pasal 25?",
+    "options": [
+      "Mengurangi jumlah wajib pajak",
+      "Meringankan pembayaran pajak agar dilakukan secara berkala",
+      "Menghapus kewajiban SPT Tahunan",
+      "Menggantikan PPh Final"
+    ],
+    "answer": 1,
+    "explanation": "PPh Pasal 25 bertujuan meringankan beban wajib pajak dengan cara membayar pajak secara angsuran setiap bulan."
+  },
+  {
+    "question": "Jika Wajib Pajak memperoleh kompensasi kerugian, siapa yang dapat menetapkan besarnya angsuran PPh Pasal 25?",
+    "options": [
+      "Direktur Jenderal Pajak",
+      "Kepala KPP",
+      "Menteri Keuangan",
+      "BPK"
+    ],
+    "answer": 0,
+    "explanation": "Direktur Jenderal Pajak berwenang menetapkan besarnya angsuran dalam kondisi tertentu termasuk adanya kompensasi kerugian."
+  },
+  {
+    "question": "Pasal 28A mengatur kondisi ketika jumlah kredit pajak lebih besar daripada apa?",
+    "options": [
+      "Penghasilan bruto",
+      "Biaya fiskal",
+      "PPh terutang",
+      "PPh Pasal 25"
+    ],
+    "answer": 2,
+    "explanation": "Pasal 28A mengatur kondisi lebih bayar, yaitu ketika kredit pajak lebih besar daripada PPh terutang."
+  },
+  {
+    "question": "Pasal 29 berlaku apabila PPh terutang lebih besar daripada apa?",
+    "options": [
+      "Penghasilan netto",
+      "Kredit pajak",
+      "Peredaran bruto",
+      "Biaya usaha"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 29 mengatur kondisi kurang bayar apabila PPh terutang lebih besar daripada jumlah kredit pajak."
+  },
+  {
+    "question": "Fasilitas Pasal 31E hanya diberikan kepada siapa?",
+    "options": [
+      "Wajib Pajak Orang Pribadi",
+      "Wajib Pajak Badan Dalam Negeri",
+      "Bentuk Usaha Tetap",
+      "Seluruh Wajib Pajak"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E diberikan kepada Wajib Pajak Badan Dalam Negeri yang memenuhi syarat peredaran bruto tertentu."
+  },
+  {
+    "question": "Bentuk Usaha Tetap (BUT) termasuk penerima fasilitas Pasal 31E?",
+    "options": [
+      "Ya",
+      "Tidak",
+      "Hanya jika omzet di bawah Rp50 miliar",
+      "Tergantung persetujuan DJP"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa fasilitas Pasal 31E tidak berlaku bagi Bentuk Usaha Tetap (BUT)."
+  },
+  {
+    "question": "Batas maksimal peredaran bruto untuk memperoleh fasilitas Pasal 31E adalah berapa?",
+    "options": [
+      "Rp4,8 miliar",
+      "Rp25 miliar",
+      "Rp50 miliar",
+      "Rp100 miliar"
+    ],
+    "answer": 2,
+    "explanation": "Wajib Pajak Badan Dalam Negeri dengan peredaran bruto sampai Rp50 miliar dapat memanfaatkan fasilitas Pasal 31E."
+  },
+  {
+    "question": "Penghasilan yang diperhitungkan dalam Pasal 31E mencakup apa saja?",
+    "options": [
+      "Hanya penghasilan usaha utama",
+      "Hanya penghasilan final",
+      "Semua penghasilan usaha dan luar usaha yang bukan final",
+      "Hanya penghasilan ekspor"
+    ],
+    "answer": 2,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa seluruh penghasilan usaha dan luar usaha yang tidak bersifat final diperhitungkan."
+  },
+  {
+    "question": "Peredaran bruto dalam Pasal 31E dihitung setelah memperhitungkan apa?",
+    "options": [
+      "Biaya operasional",
+      "Retur penjualan dan potongan tunai",
+      "PPh Pasal 25",
+      "Kompensasi kerugian"
+    ],
+    "answer": 1,
+    "explanation": "Peredaran bruto dihitung setelah dikurangi retur penjualan, pengurangan penjualan, dan potongan tunai pada tahun pajak yang bersangkutan."
+  },
+{
+    "question": "SE-02/PJ/2015 diterbitkan pada tanggal berapa?",
+    "options": [
+      "1 Januari 2015",
+      "9 Januari 2015",
+      "17 Agustus 2015",
+      "31 Desember 2015"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 diterbitkan pada tanggal 9 Januari 2015 sebagai penegasan atas pelaksanaan Pasal 31E ayat (1) UU PPh."
+  },
+  {
+    "question": "SE-02/PJ/2015 mencabut surat edaran yang mana?",
+    "options": [
+      "SE-01/PJ/2014",
+      "SE-66/PJ/2010",
+      "SE-02/PJ/2010",
+      "SE-31/PJ/2015"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 mencabut dan menggantikan SE-66/PJ/2010."
+  },
+  {
+    "question": "Fasilitas Pasal 31E digunakan untuk menghitung PPh terutang atas penghasilan kena pajak yang bersifat apa?",
+    "options": [
+      "Final",
+      "Tidak final",
+      "Hadiah undian",
+      "PPh Pasal 4 ayat (2)"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E hanya digunakan untuk menghitung PPh terutang atas penghasilan kena pajak yang tidak bersifat final."
+  },
+  {
+    "question": "Angsuran PPh Pasal 25 bagi wajib pajak yang memperoleh fasilitas Pasal 31E dihitung menggunakan apa?",
+    "options": [
+      "Tarif umum badan",
+      "Tarif Pasal 31E ayat (1)",
+      "Tarif PPh Final",
+      "Tarif progresif orang pribadi"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa angsuran PPh Pasal 25 menggunakan tarif sesuai Pasal 31E ayat (1)."
+  },
+  {
+    "question": "Lembar penghitungan fasilitas Pasal 31E dapat dilampirkan dalam dokumen apa?",
+    "options": [
+      "SPT Masa PPN",
+      "SPT Tahunan PPh Badan",
+      "SPT Masa PPh Pasal 21",
+      "Laporan Keuangan Auditan"
+    ],
+    "answer": 1,
+    "explanation": "Lembar penghitungan fasilitas Pasal 31E dapat dilampirkan dalam SPT Tahunan PPh Badan."
+  },
+  {
+    "question": "Self Assessment dalam perpajakan berarti apa?",
+    "options": [
+      "Pemerintah menghitung pajak wajib pajak",
+      "Wajib pajak menghitung, menyetor, dan melaporkan sendiri pajaknya",
+      "Pajak ditentukan oleh auditor eksternal",
+      "Pajak dibayar setelah pemeriksaan"
+    ],
+    "answer": 1,
+    "explanation": "Sistem Self Assessment memberikan kewenangan kepada wajib pajak untuk menghitung, membayar, dan melaporkan sendiri kewajiban perpajakannya."
+  },
+  {
+    "question": "Fasilitas Pasal 31E berlaku bagi subjek pajak dalam negeri kecuali siapa?",
+    "options": [
+      "Perseroan Terbatas",
+      "Koperasi",
+      "Bentuk Usaha Tetap",
+      "BUMD"
+    ],
+    "answer": 2,
+    "explanation": "Fasilitas Pasal 31E berlaku bagi subjek pajak dalam negeri kecuali Bentuk Usaha Tetap (BUT)."
+  },
+  {
+    "question": "Penghasilan luar kegiatan usaha termasuk dalam perhitungan peredaran bruto untuk Pasal 31E?",
+    "options": [
+      "Ya",
+      "Tidak",
+      "Hanya jika berasal dari luar negeri",
+      "Tergantung keputusan DJP"
+    ],
+    "answer": 0,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa penghasilan luar kegiatan usaha juga diperhitungkan sepanjang bukan penghasilan final."
+  },
+  {
+    "question": "Peredaran bruto untuk Pasal 31E dihitung sebelum atau sesudah dikurangi biaya untuk mendapatkan penghasilan?",
+    "options": [
+      "Sesudah dikurangi biaya",
+      "Sebelum dikurangi biaya",
+      "Sesudah pajak dibayar",
+      "Tidak ada ketentuan"
+    ],
+    "answer": 1,
+    "explanation": "Peredaran bruto dihitung sebelum dikurangi biaya untuk mendapatkan, menagih, dan memelihara penghasilan."
+  },
+  {
+    "question": "Apa tujuan utama pemberian fasilitas Pasal 31E?",
+    "options": [
+      "Menghapus pajak badan",
+      "Mendorong perkembangan usaha menengah",
+      "Mengurangi jumlah wajib pajak",
+      "Menggantikan PPh Final UMKM"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E bertujuan memberikan keringanan tarif bagi badan usaha dengan skala usaha tertentu agar dapat berkembang."
+  },
+{
+    "question": "Apa yang dimaksud dengan PPh Pasal 25?",
+    "options": [
+      "Pajak atas impor barang",
+      "Angsuran pajak penghasilan dalam tahun berjalan",
+      "Pajak atas dividen",
+      "Pajak atas transaksi tanah"
+    ],
+    "answer": 1,
+    "explanation": "PPh Pasal 25 merupakan mekanisme pembayaran pajak penghasilan secara angsuran selama tahun berjalan untuk meringankan beban wajib pajak."
+  },
+  {
+    "question": "Tujuan utama adanya angsuran PPh Pasal 25 adalah untuk?",
+    "options": [
+      "Mengurangi jumlah pajak terutang",
+      "Meringankan pembayaran pajak dengan sistem cicilan",
+      "Menghapus kewajiban SPT Tahunan",
+      "Menggantikan PPh Pasal 21"
+    ],
+    "answer": 1,
+    "explanation": "Angsuran PPh Pasal 25 bertujuan agar pembayaran pajak dilakukan secara bertahap sehingga tidak memberatkan wajib pajak pada akhir tahun."
+  },
+  {
+    "question": "Jika jumlah kredit pajak lebih besar daripada PPh terutang, kondisi tersebut disebut?",
+    "options": [
+      "PPh Kurang Bayar",
+      "PPh Nihil",
+      "PPh Lebih Bayar",
+      "PPh Final"
+    ],
+    "answer": 2,
+    "explanation": "Apabila jumlah kredit pajak melebihi PPh terutang, maka terjadi PPh Lebih Bayar sebagaimana diatur dalam Pasal 28A UU PPh."
+  },
+  {
+    "question": "PPh Kurang Bayar diatur dalam pasal berapa?",
+    "options": [
+      "Pasal 25",
+      "Pasal 28A",
+      "Pasal 29",
+      "Pasal 31E"
+    ],
+    "answer": 2,
+    "explanation": "Pasal 29 mengatur mengenai PPh Kurang Bayar apabila PPh terutang lebih besar daripada kredit pajak yang dimiliki wajib pajak."
+  },
+  {
+    "question": "Fasilitas Pasal 31E diberikan kepada wajib pajak badan dengan peredaran bruto maksimal?",
+    "options": [
+      "Rp4,8 miliar",
+      "Rp10 miliar",
+      "Rp25 miliar",
+      "Rp50 miliar"
+    ],
+    "answer": 3,
+    "explanation": "Fasilitas Pasal 31E diberikan kepada Wajib Pajak Badan Dalam Negeri dengan peredaran bruto sampai dengan Rp50 miliar."
+  },
+  {
+    "question": "Bagian peredaran bruto yang mendapatkan fasilitas tarif Pasal 31E paling banyak sebesar?",
+    "options": [
+      "Rp2,4 miliar",
+      "Rp4,8 miliar",
+      "Rp10 miliar",
+      "Rp50 miliar"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas tarif Pasal 31E berlaku atas bagian Penghasilan Kena Pajak yang berasal dari peredaran bruto sampai dengan Rp4,8 miliar."
+  },
+  {
+    "question": "Tarif Pasal 31E memberikan pengurangan sebesar berapa persen dari tarif normal?",
+    "options": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 31E memberikan fasilitas berupa pengurangan tarif sebesar 50% dari tarif normal untuk bagian tertentu dari Penghasilan Kena Pajak."
+  },
+  {
+    "question": "SE-02/PJ/2015 menegaskan bahwa fasilitas Pasal 31E bersifat?",
+    "options": [
+      "Opsional",
+      "Bersyarat dan wajib diterapkan jika memenuhi ketentuan",
+      "Khusus BUMN",
+      "Khusus perusahaan ekspor"
+    ],
+    "answer": 1,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa fasilitas Pasal 31E bukan pilihan, melainkan wajib diterapkan apabila syaratnya terpenuhi."
+  },
+  {
+    "question": "Sistem pemungutan pajak Indonesia yang memberi kewenangan kepada wajib pajak untuk menghitung sendiri pajaknya disebut?",
+    "options": [
+      "Official Assessment System",
+      "Self Assessment System",
+      "Withholding System",
+      "Automatic Tax System"
+    ],
+    "answer": 1,
+    "explanation": "Indonesia menerapkan Self Assessment System, yaitu wajib pajak menghitung, membayar, dan melaporkan sendiri kewajiban perpajakannya."
+  },
+  {
+    "question": "Bentuk Usaha Tetap (BUT) termasuk penerima fasilitas Pasal 31E?",
+    "options": [
+      "Ya",
+      "Tidak",
+      "Hanya jika omzet di bawah Rp50 miliar",
+      "Tergantung persetujuan DJP"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E tidak diberikan kepada Bentuk Usaha Tetap (BUT), melainkan hanya kepada Wajib Pajak Badan Dalam Negeri yang memenuhi syarat."
+  },
+{
+    "question": "Kapan wajib pajak harus melunasi PPh Pasal 29 yang masih kurang dibayar?",
+    "options": [
+      "Sebelum penyampaian SPT Tahunan",
+      "Setelah pemeriksaan pajak",
+      "Saat menerima SKPKB",
+      "Pada akhir tahun berikutnya"
+    ],
+    "answer": 0,
+    "explanation": "PPh Pasal 29 harus dilunasi sebelum SPT Tahunan PPh disampaikan oleh wajib pajak."
+  },
+  {
+    "question": "PPh Pasal 28A mengatur mengenai kondisi apa?",
+    "options": [
+      "Kurang bayar pajak",
+      "Lebih bayar pajak",
+      "Angsuran bulanan pajak",
+      "Sanksi administrasi"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 28A mengatur mengenai PPh Lebih Bayar, yaitu ketika kredit pajak lebih besar daripada PPh terutang."
+  },
+  {
+    "question": "Pengurangan tarif Pasal 31E diberikan terhadap bagian Penghasilan Kena Pajak yang berasal dari peredaran bruto sampai sebesar?",
+    "options": [
+      "Rp2,4 miliar",
+      "Rp4,8 miliar",
+      "Rp10 miliar",
+      "Rp50 miliar"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E berlaku untuk bagian PKP yang berasal dari peredaran bruto sampai dengan Rp4,8 miliar."
+  },
+  {
+    "question": "Peredaran bruto yang digunakan dalam Pasal 31E dihitung setelah dikurangi apa?",
+    "options": [
+      "Biaya operasional",
+      "Pajak masukan",
+      "Retur dan potongan penjualan",
+      "Kompensasi kerugian"
+    ],
+    "answer": 2,
+    "explanation": "Peredaran bruto dihitung setelah dikurangi retur penjualan, pengurangan penjualan, dan potongan tunai."
+  },
+  {
+    "question": "SE-02/PJ/2015 merupakan penegasan pelaksanaan ketentuan pada pasal berapa?",
+    "options": [
+      "Pasal 25",
+      "Pasal 28A",
+      "Pasal 29",
+      "Pasal 31E ayat (1)"
+    ],
+    "answer": 3,
+    "explanation": "SE-02/PJ/2015 merupakan penegasan pelaksanaan Pasal 31E ayat (1) UU PPh."
+  },
+  {
+    "question": "Angsuran PPh Pasal 25 untuk wajib pajak yang memperoleh fasilitas Pasal 31E menggunakan tarif berdasarkan?",
+    "options": [
+      "Tarif umum badan",
+      "Tarif PPh Final",
+      "Tarif Pasal 31E ayat (1)",
+      "Tarif progresif orang pribadi"
+    ],
+    "answer": 2,
+    "explanation": "SE-02/PJ/2015 menegaskan bahwa angsuran PPh Pasal 25 dihitung menggunakan tarif Pasal 31E ayat (1)."
+  },
+  {
+    "question": "Sistem Self Assessment memberikan tanggung jawab kepada siapa untuk menghitung pajak terutang?",
+    "options": [
+      "Direktorat Jenderal Pajak",
+      "Konsultan Pajak",
+      "Wajib Pajak",
+      "Akuntan Publik"
+    ],
+    "answer": 2,
+    "explanation": "Dalam Self Assessment System, wajib pajak bertanggung jawab menghitung, membayar, dan melaporkan sendiri pajaknya."
+  },
+  {
+    "question": "Fasilitas Pasal 31E berlaku untuk penghasilan yang bersifat?",
+    "options": [
+      "Final",
+      "Tidak final",
+      "Hadiah undian",
+      "Objek PPN"
+    ],
+    "answer": 1,
+    "explanation": "Fasilitas Pasal 31E hanya diterapkan pada penghasilan kena pajak yang bersifat tidak final."
+  },
+  {
+    "question": "Lembar penghitungan fasilitas Pasal 31E dapat dilampirkan dalam dokumen apa?",
+    "options": [
+      "SPT Masa PPN",
+      "SPT Tahunan PPh Badan",
+      "SPT Masa PPh 21",
+      "Laporan Audit"
+    ],
+    "answer": 1,
+    "explanation": "Lembar penghitungan fasilitas Pasal 31E dapat dilampirkan dalam SPT Tahunan PPh Badan."
+  },
+  {
+    "question": "Tujuan utama fasilitas Pasal 31E adalah?",
+    "options": [
+      "Menghapus pajak badan",
+      "Memberikan insentif bagi badan usaha dengan skala tertentu",
+      "Mengurangi jumlah wajib pajak",
+      "Menggantikan PPh Final UMKM"
+    ],
+    "answer": 1,
+    "explanation": "Pasal 31E bertujuan memberikan insentif berupa pengurangan tarif kepada badan usaha dengan peredaran bruto tertentu agar dapat berkembang."
+  }
+
+]
