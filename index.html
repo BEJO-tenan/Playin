@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Smart Learning - UKT AR 2026</title>
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent: #ef4444;
+            --success: #10b981;
+            --border: #334155;
+            --primary-blue: #3b82f6;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 14px;
+            display: block;
+            min-height: 100vh;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .screen-border-flash {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border: 4px solid #fbbf24;
+            box-shadow: inset 0 0 20px #fbbf24;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.1s ease;
+        }
+        .screen-border-flash.active {
+            opacity: 1;
+        }
+
+        .header {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 1.4rem;
+            color: #fbbf24;
+            font-weight: 800;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .combo-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .combo-bar-bg {
+            background-color: #0b0f19;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .combo-bar-fill {
+            background: linear-gradient(90deg, #ef4444, #fbbf24);
+            width: 0%;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .quiz-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .question-text {
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-btn {
+            background-color: #273549;
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background-color: #334155;
+        }
+
+        .option-btn.correct {
+            background-color: #064e3b !important;
+            border-color: var(--success) !important;
+        }
+
+        .option-btn.wrong {
+            background-color: #7f1d1d !important;
+            border-color: var(--accent) !important;
+        }
+
+        .explanation-box {
+            background-color: #0f172a;
+            border-left: 4px solid var(--primary-blue);
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            flex: 1;
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .nav-btn:disabled {
+            background-color: #334155;
+            color: var(--text-secondary);
+            cursor: not-allowed;
+        }
+
+        .file-upload-section {
+            background-color: var(--bg-card);
+            border: 1px dashed var(--border);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-label {
+            background-color: #273549;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: inline-block;
+            border: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="screen-border-flash" id="goldFlash"></div>
+
+    <div class="header">
+        <h1>Smart Learning - UKT AR 2026</h1>
+    </div>
+
+    <!-- Live Stats Box -->
+    <div class="stats-grid" id="liveStatsGrid">
+        <div class="stat-card">
+            <div class="stat-label">Progress Soal</div>
+            <div class="stat-value" id="statTotal">0 / 0</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Akurasi Live</div>
+            <div class="stat-value" id="statAccuracy" style="color: var(--success);">0%</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Rank</div>
+            <div class="stat-value" id="liveRank" style="color: #3b82f6;">Warrior</div>
+            <div style="font-size:0.7rem; color: var(--text-secondary);" id="rankProgressText">Benar 0 Soal</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Max Combo</div>
+            <div class="stat-value" id="statMaxCombo" style="color: #fbbf24;">0 Hit</div>
+        </div>
+    </div>
+
+    <!-- Combo Progress Section -->
+    <div class="combo-container" id="liveComboSection">
+        <div style="display:flex; justify-content:space-between; font-size:0.8rem;">
+            <span id="comboText" style="color:#fbbf24; font-weight:700;"></span>
+            <span id="comboProgressText" style="color:var(--text-secondary);">Hit Siklus: 0/5</span>
+        </div>
+        <div class="combo-bar-bg">
+            <div class="combo-bar-fill" id="comboBar"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Main Card -->
+    <div class="quiz-card" id="mainQuizCard">
+        <div class="question-text" id="qText">Silakan unggah file JSON berisi bank soal untuk memulai simulasi kuis.</div>
+        
+        <div class="options-list" id="optionsList"></div>
+        
+        <div class="explanation-box" id="explanationBox"></div>
+        
+        <div class="nav-actions">
+            <button class="nav-btn" id="prevBtn" onclick="prevQuestion()" disabled>Kembali</button>
+            <button class="nav-btn" id="nextBtn" onclick="nextQuestion()">Lanjut</button>
+        </div>
+    </div>
+
+    <!-- Layar Statistik Akhir -->
+    <div class="quiz-card" id="resultCard" style="display: none; text-align: center; gap: 20px;">
+        <h2 style="color: #fbbf24; font-size: 1.5rem; font-weight: 800; margin-bottom: 10px;">🎉 Simulasi Selesai! 🎉</h2>
+        
+        <div style="background-color: #0b0f19; padding: 20px; border-radius: 14px; border: 1px solid var(--border);">
+            <div style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 5px;">Skor Akhir / Akurasi</div>
+            <div id="finalAccuracy" style="font-size: 2.5rem; font-weight: 800; color: #10b981;">0%</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; text-align: left;">
+            <div style="background-color: #273549; padding: 12px; border-radius: 10px; border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-secondary);">Total Soal</div>
+                <div id="finalTotal" style="font-size: 1.1rem; font-weight: 700;">0</div>
+            </div>
+            <div style="background-color: #273549; padding: 12px; border-radius: 10px; border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-secondary);">Jawaban Benar</div>
+                <div id="finalCorrect" style="font-size: 1.1rem; font-weight: 700; color: #34d399;">0</div>
+            </div>
+            <div style="background-color: #273549; padding: 12px; border-radius: 10px; border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-secondary);">Maksimum Combo</div>
+                <div id="finalCombo" style="font-size: 1.1rem; font-weight: 700; color: #fbbf24;">0</div>
+            </div>
+            <div style="background-color: #273549; padding: 12px; border-radius: 10px; border: 1px solid var(--border);">
+                <div style="font-size: 0.75rem; color: var(--text-secondary);">Rank Akhir</div>
+                <div id="finalRank" style="font-size: 1.1rem; font-weight: 700; color: #3b82f6;">Warrior</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 10px;">
+            <button class="nav-btn" style="width: 100%; margin-bottom: 10px;" onclick="restartQuiz()">🔄 Ulangi Kuis</button>
+        </div>
+    </div>
+
+    <!-- File Upload Section -->
+    <div class="file-upload-section">
+        <div style="font-size: 0.85rem; margin-bottom: 8px; color: var(--text-secondary);">
+            File aktif: <span id="loadedFileStatus" style="color: #fbbf24; font-weight:600;">Belum ada</span>
+        </div>
+        <label for="jsonFileInput" class="file-label">📂 Pilih File JSON Soal</label>
+        <input type="file" id="jsonFileInput" class="file-input" accept=".json" onchange="handleJsonUpload(this)">
+    </div>
+
+    <script>
+        let quizData = [];
+        let currentIndex = 0;
+        let totalAnswered = 0;
+        let correctAnswers = 0;
+        let runningCorrectStreak = 0;
+        let comboHitCount = 0;
+        let maxComboHit = 0;
+        
+        // Simpan status jawaban pengguna tiap indeks soal agar pembahasan tetap konsisten saat navigasi bolak-balik
+        let userAnswers = {}; 
+
+        const sampleData = [
+            {
+                question: "Contoh Soal: Apa warna utama dari tema aplikasi ini?",
+                options: ["Biru Neon", "Dark Gold / Emas Gelap", "Merah Terang", "Hijau Daun"],
+                answer: 1,
+                explanation: "Tema aplikasi ini menggunakan paduan warna Dark Gold (#fbbf24) dan warna latar belakang gelap (Slate/Navy Blue)."
+            }
+        ];
+        quizData = sampleData;
+
+        function loadQuestion() {
+            document.getElementById('mainQuizCard').style.display = 'flex';
+            document.getElementById('liveStatsGrid').style.display = 'grid';
+            document.getElementById('liveComboSection').style.display = 'block';
+            document.getElementById('resultCard').style.display = 'none';
+
+            if (!quizData || quizData.length === 0) return;
+
+            const currentQuiz = quizData[currentIndex];
+            
+            document.getElementById("statTotal").textContent = `${currentIndex + 1} / ${quizData.length}`;
+            document.getElementById("qText").textContent = currentQuiz.question;
+            
+            const optionsList = document.getElementById("optionsList");
+            optionsList.innerHTML = "";
+            
+            const explanationBox = document.getElementById("explanationBox");
+
+            // Render Pilihan Jawaban
+            currentQuiz.options.forEach((option, index) => {
+                const btn = document.createElement("button");
+                btn.className = "option-btn";
+                btn.textContent = option;
+                btn.onclick = () => selectOption(index, btn);
+                optionsList.appendChild(btn);
+            });
+
+            // Cek apakah soal ini sudah pernah dijawab sebelumnya (saat user klik Kembali/Lanjut)
+            if (userAnswers[currentIndex] !== undefined) {
+                const selectedIndex = userAnswers[currentIndex];
+                const allButtons = document.querySelectorAll(".option-btn");
+                
+                // Warnai tombol sesuai riwayat jawaban
+                if (selectedIndex === currentQuiz.answer) {
+                    allButtons[selectedIndex].classList.add("correct");
+                } else {
+                    allButtons[selectedIndex].classList.add("wrong");
+                    allButtons[currentQuiz.answer].classList.add("correct");
+                }
+                
+                // Tampilkan pembahasan agar TIDAK HILANG
+                if (currentQuiz.explanation) {
+                    explanationBox.textContent = "Penjelasan: " + currentQuiz.explanation;
+                    explanationBox.style.display = "block";
+                }
+            } else {
+                // Jika belum dijawab, sembunyikan kotak pembahasan
+                explanationBox.style.display = "none";
+                explanationBox.textContent = "";
+            }
+
+            document.getElementById("prevBtn").disabled = currentIndex === 0;
+            
+            const nextBtn = document.getElementById("nextBtn");
+            if (currentIndex === quizData.length - 1) {
+                nextBtn.textContent = "Selesai & Lihat Hasil";
+            } else {
+                nextBtn.textContent = "Lanjut";
+            }
+        }
+
+        function selectOption(selectedIndex, clickedBtn) {
+            // Jika sudah pernah dijawab, kunci agar tidak bisa klik ulang
+            if (userAnswers[currentIndex] !== undefined) return;
+            
+            userAnswers[currentIndex] = selectedIndex;
+            const currentQuiz = quizData[currentIndex];
+            const allButtons = document.querySelectorAll(".option-btn");
+            totalAnswered++;
+
+            if (selectedIndex === currentQuiz.answer) {
+                clickedBtn.classList.add("correct");
+                correctAnswers++;
+                runningCorrectStreak++;
+                comboHitCount++;
+                
+                if (comboHitCount > maxComboHit) {
+                    maxComboHit = comboHitCount;
+                }
+                
+                triggerGoldFlash();
+            } else {
+                clickedBtn.classList.add("wrong");
+                allButtons[currentQuiz.answer].classList.add("correct");
+                comboHitCount = 0;
+            }
+
+            // Update statistik live
+            const accuracy = Math.round((correctAnswers / totalAnswered) * 100);
+            document.getElementById("statAccuracy").textContent = accuracy + "%";
+            document.getElementById("statMaxCombo").textContent = maxComboHit + " Hit";
+
+            // Update Combo Progress Bar
+            const cycleProgress = comboHitCount % 5;
+            const barWidth = (cycleProgress / 5) * 100;
+            document.getElementById("comboBar").style.width = comboHitCount > 0 && cycleProgress === 0 ? "100%" : barWidth + "%";
+            
+            if (comboHitCount > 0) {
+                document.getElementById("comboText").textContent = `COMBO X${comboHitCount} 🔥`;
+                document.getElementById("comboProgressText").textContent = `Hit Siklus: ${cycleProgress === 0 ? 5 : cycleProgress}/5`;
+            } else {
+                document.getElementById("comboText").textContent = "";
+                document.getElementById("comboProgressText").textContent = "Hit Siklus: 0/5";
+            }
+
+            // Update Rank System
+            let rank = "Warrior";
+            let rankColor = "#94a3b8";
+            if (correctAnswers >= 20) {
+                rank = "Mythic Tax Scholar 👑";
+                rankColor = "#f59e0b";
+            } else if (correctAnswers >= 15) {
+                rank = "Legendary Auditor 🎯";
+                rankColor = "#a855f7";
+            } else if (correctAnswers >= 10) {
+                rank = "Master Collector 💎";
+                rankColor = "#3b82f6";
+            } else if (correctAnswers >= 5) {
+                rank = "Elite Inspector ⚔️";
+                rankColor = "#10b981";
+            }
+            
+            const liveRankElement = document.getElementById("liveRank");
+            liveRankElement.textContent = rank;
+            liveRankElement.style.color = rankColor;
+            document.getElementById("rankProgressText").textContent = `Benar ${correctAnswers} Soal`;
+
+            // Tampilkan pembahasan tepat setelah menjawab
+            if (currentQuiz.explanation) {
+                const explanationBox = document.getElementById("explanationBox");
+                explanationBox.textContent = "Penjelasan: " + currentQuiz.explanation;
+                explanationBox.style.display = "block";
+            }
+        }
+
+        function triggerGoldFlash() {
+            const flash = document.getElementById("goldFlash");
+            flash.classList.add("active");
+            setTimeout(() => {
+                flash.classList.remove("active");
+            }, 150);
+        }
+
+        function nextQuestion() {
+            if (currentIndex < quizData.length - 1) {
+                currentIndex++;
+                loadQuestion();
+            } else {
+                showFinalStatistics();
+            }
+        }
+
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                loadQuestion();
+            }
+        }
+
+        function showFinalStatistics() {
+            document.getElementById('mainQuizCard').style.display = 'none';
+            document.getElementById('liveStatsGrid').style.display = 'none';
+            document.getElementById('liveComboSection').style.display = 'none';
+            
+            const accuracy = totalAnswered > 0 ? Math.round((correctAnswers / totalAnswered) * 100) : 0;
+            
+            document.getElementById("finalAccuracy").textContent = accuracy + "%";
+            document.getElementById("finalTotal").textContent = quizData.length;
+            document.getElementById("finalCorrect").textContent = correctAnswers;
+            document.getElementById("finalCombo").textContent = maxComboHit + " Hit";
+            document.getElementById("finalRank").textContent = document.getElementById("liveRank").textContent;
+            
+            document.getElementById("resultCard").style.display = 'flex';
+        }
+
+        function restartQuiz() {
+            currentIndex = 0;
+            totalAnswered = 0;
+            correctAnswers = 0;
+            runningCorrectStreak = 0;
+            comboHitCount = 0;
+            maxComboHit = 0;
+            userAnswers = {}; // Reset semua riwayat jawaban kuis
+            
+            document.getElementById("comboBar").style.width = "0%";
+            document.getElementById("comboText").textContent = "";
+            document.getElementById("comboProgressText").textContent = "Hit Siklus: 0/5";
+            document.getElementById("statAccuracy").textContent = "0%";
+            document.getElementById("statMaxCombo").textContent = "0 Hit";
+            
+            const liveRankElement = document.getElementById("liveRank");
+            liveRankElement.textContent = "Warrior";
+            liveRankElement.style.color = "#3b82f6";
+            document.getElementById("rankProgressText").textContent = "Benar 0 Soal";
+            
+            loadQuestion();
+        }
+
+        function handleJsonUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const parsedData = JSON.parse(e.target.result);
+                    if (Array.isArray(parsedData) && parsedData.length > 0) {
+                        quizData = parsedData;
+                        document.getElementById("loadedFileStatus").textContent = file.name;
+                        restartQuiz();
+                    } else {
+                        alert("Format file JSON harus berupa array objek soal.");
+                    }
+                } catch (err) {
+                    alert("Gagal membaca berkas JSON. Pastikan formatnya valid.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        window.onload = loadQuestion;
+    </script>
+</body>
+</html>
